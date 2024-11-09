@@ -1,0 +1,13 @@
+<!-- menu.component.html -->
+<div>
+    <button (click)="abrirBaseDatos()">Abrir Base de Datos</button>
+    <button (click)="obtenerPersonas()">Obtener Personas</button>
+  </div>
+  
+  <div *ngIf="personas.length > 0">
+    <h3>Lista de Personas</h3>
+    <ul>
+      <li *ngFor="let persona of personas">{{ persona.nombre }}</li>
+    </ul>
+  </div>
+  

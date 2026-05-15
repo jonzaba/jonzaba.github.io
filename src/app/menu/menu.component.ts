@@ -19,9 +19,10 @@ export class MenuComponent {
   }
 
   obtenerPersonas() {
-    this.http.get<any[]>('http://localhost:8080/api/personas').subscribe(
-      (data) => (this.personas = data),
-      (error) => console.error('Error al obtener personas:', error)
-    );
+    console.log("Listado de Personas...");
+    // this.http.get<any[]>('http://localhost:8080/api/personas').subscribe(
+    //   (data) => (this.personas = data),
+    //   (error) => console.error('Error al obtener personas:', error)
+    // );
   }
 }

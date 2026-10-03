@@ -6,6 +6,11 @@
       "type": "npm",
       "script": "start",
       "isBackground": true,
+      "options": {
+        "env": {
+          "PATH": "${env:HOME}/.local/bin:${env:PATH}"
+        }
+      },
       "problemMatcher": {
         "owner": "typescript",
         "pattern": "$tsc",
@@ -24,6 +29,11 @@
       "type": "npm",
       "script": "test",
       "isBackground": true,
+      "options": {
+        "env": {
+          "PATH": "${env:HOME}/.local/bin:${env:PATH}"
+        }
+      },
       "problemMatcher": {
         "owner": "typescript",
         "pattern": "$tsc",

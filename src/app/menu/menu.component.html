@@ -1,16 +1,23 @@
 <!-- menu.component.html -->
-<div>
-  <button (click)="abrirBaseDatos()">Abrir Base de Datos</button>
-  <button (click)="obtenerPersonas()">Obtener Personas</button>
-</div>
+<main class="menu-page">
+  <button class="back-button" type="button" (click)="volver()">
+    <span aria-hidden="true">&#8592;</span>
+    Volver
+  </button>
 
-@if (personas.length > 0) {
-  <div>
-    <h3>Lista de Personas</h3>
-    <ul>
-      @for (persona of personas; track persona) {
-        <li>{{ persona.nombre }}</li>
-      }
-    </ul>
+  <div class="menu-actions">
+    <button type="button" (click)="abrirBaseDatos()">Abrir Base de Datos</button>
+    <button type="button" (click)="obtenerPersonas()">Obtener Personas</button>
   </div>
-}
+
+  @if (personas.length > 0) {
+    <div>
+      <h3>Lista de Personas</h3>
+      <ul>
+        @for (persona of personas; track persona) {
+          <li>{{ persona.nombre }}</li>
+        }
+      </ul>
+    </div>
+  }
+</main>

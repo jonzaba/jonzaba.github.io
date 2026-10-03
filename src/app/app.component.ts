@@ -1,15 +1,14 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-
-import { MenuComponent } from './menu/menu.component';
+import { Component, ChangeDetectionStrategy, inject } from '@angular/core';
+import { Router, RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
     selector: 'app-root',
-    imports: [RouterOutlet, MenuComponent],
+    imports: [RouterOutlet, RouterLink],
     templateUrl: './app.component.html',
     changeDetection: ChangeDetectionStrategy.Eager,
     styleUrl: './app.component.css'
 })
 export class AppComponent {
+  readonly router = inject(Router);
   title = 'FrontendApp';
 }

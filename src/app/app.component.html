@@ -177,6 +177,7 @@
   }
 </style>
 
+@if (router.url === '/') {
 <main class="main">
   <div class="content">
     <div class="left-side">
@@ -228,6 +229,7 @@
       <h1>Hello, {{ title }}</h1>
       <p>Congratulations! Your app is running. 🎉</p>
       <p>Kaixo</p>
+      <button class="pill" routerLink="/menu">Menu Jon</button>
     </div>
     <!-- <div>
       <app-menu></app-menu>
@@ -327,6 +329,7 @@
     </div>
   </div>
 </main>
+}
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->

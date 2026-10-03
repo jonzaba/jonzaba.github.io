@@ -1,11 +1,12 @@
 // menu.component.ts
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-menu',
   standalone: true, // Esto hace que sea standalone
   templateUrl: './menu.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent {
